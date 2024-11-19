@@ -21,8 +21,8 @@ services:
     container_name: postgres_db
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+      POSTGRES_PASSWORD: process.env.PG_PASSWORD
+      POSTGRES_DB: process.env.PG_DB
     ports:
       - "5433:5433"
 
