@@ -7,7 +7,6 @@ class Settings(BaseSettings):
     MY_GMAIL_SECRET_KEY_CONTACT: str  # Add this field if you need it
     POSTGRES_HOST: str = "localhost"  # Default value if not provided
     POSTGRES_PORT: int = 5433  # Set to your custom PostgreSQL port (5433)
-    POSTGRES_USER = str = "gaye"
     PG_PASSWORD= str
     PG_DB= str
 
