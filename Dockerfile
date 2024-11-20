@@ -1,6 +1,5 @@
-
-FROM python:3.10-slim  # Adjust based on compatibility
-
+# Use a lightweight Python 3.10 image as the base
+FROM python:3.10-slim
 
 # Set the working directory in the container
 WORKDIR /app
