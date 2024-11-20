@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=${DATABASE_URL}
+      - DATABASE_URL=postgresql://gaye:Postgres.2424@localhost:5433/fastapi_app_db
       - SECRET_KEY=${SECRET_KEY}
       - ALGORITHM={ALGORITHM}
       - MY_GMAIL_SECRET_KEY_CONTACT={MY_GMAIL_SECRET_KEY_CONTACT}
