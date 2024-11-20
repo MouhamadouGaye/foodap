@@ -20,10 +20,12 @@ services:
     image: postgres:13
     container_name: postgres_db
     environment:
-      POSTGRES_USER: gaye
-      POSTGRES_PASSWORD: Postgres.2424
-      POSTGRES_DB: fastapi_app_db
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_DB: ${PG_PASSWORD}
     ports:
       - "5432:5433"
+
+
 
 
