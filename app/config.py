@@ -9,6 +9,8 @@ class Settings(BaseSettings):
     POSTGRES_PORT: int = 5433  # Set to your custom PostgreSQL port (5433)
     PG_PASSWORD: str  # Fixed annotation
     PG_DB: str  # Fixed annotation
+    POSTGRES_USER: str  # Add this field if needed
+
 
     class Config:
         env_file = ".env"  # This allows you to load settings from a .env file
