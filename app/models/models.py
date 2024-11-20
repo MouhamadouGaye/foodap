@@ -11,7 +11,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
     posts = relationship("Post", back_populates="user")
-    # last_active = Column(DateTime, default=datetime.utcnow)  # Add last_active field
+    last_active = Column(DateTime, default=datetime.utcnow)  # Add last_active field
 
 
 # Post Model
