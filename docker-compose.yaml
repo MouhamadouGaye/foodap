@@ -24,6 +24,6 @@ services:
       POSTGRES_PASSWORD: Postgres.2424
       POSTGRES_DB: fastapi_app_db
     ports:
-      - "5433:5433"
+      - "5432:5433"
 
 
