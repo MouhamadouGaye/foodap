@@ -5,8 +5,8 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"  # This sets the default algorithm
     DATABASE_URL: str
     MY_GMAIL_SECRET_KEY_CONTACT: str  # Add this field if you need it
-    POSTGRES_HOST: str = "localhost"  # Default value if not provided
-    POSTGRES_PORT: int = 5433  # Set to your custom PostgreSQL port (5433)
+    POSTGRES_HOST: str = "127.0.0.1"  # Explicitly set to IPv4 loopback address
+    POSTGRES_PORT: int = 5433  # Custom PostgreSQL port
     PG_PASSWORD: str  # Fixed annotation
     PG_DB: str  # Fixed annotation
     POSTGRES_USER: str  # Add this field if needed
