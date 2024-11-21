@@ -5,13 +5,13 @@ from app.database import Base
 
 # User Model
 class User(Base):
-    __tablename__ = "user"
+    __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
     posts = relationship("Post", back_populates="user")
-    #last_active = Column(DateTime, default=datetime.utcnow)  # Add last_active field
+    last_active = Column(DateTime, default=datetime.utcnow)  # Add last_active field
 
 
 # Post Model
@@ -22,7 +22,7 @@ class Post(Base):
     subtitle = Column(String, index=True)
     description = Column(Text)
     media_url = Column(String, nullable=True)  # New column for image URL
-    user_id = Column(Integer, ForeignKey('user.id'))
+    user_id = Column(Integer, ForeignKey('users.id'))
     created_at = Column(DateTime, default=datetime.utcnow)
     user = relationship("User", back_populates="posts")
 
